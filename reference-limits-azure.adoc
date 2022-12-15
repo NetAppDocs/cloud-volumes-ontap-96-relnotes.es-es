@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-azure.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks 
+summary: Cloud Volumes ONTAP tiene límites de configuración de almacenamiento en Azure para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos. 
+---
+= Límites de almacenamiento en Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP tiene límites de configuración de almacenamiento para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos.
+
+
+
+== Capacidad máxima del sistema por licencia
+
+La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP viene determinada por su licencia. La capacidad máxima del sistema incluye almacenamiento basado en disco y almacenamiento de objetos utilizado para la organización en niveles de datos. NetApp no admite superar este límite.
+
+[cols="25,75"]
+|===
+| Licencia | Capacidad máxima del sistema (discos + almacenamiento de objetos) 
+
+
+| Explorar | 2 TIB (la organización en niveles de los datos no es compatible con Explore) 
+
+
+| Estándar | 10 TIB 
+
+
+| Premium | 368 TIB 
+
+
+| BYOL | 368 TIB por licencia 
+|===
+.Para alta disponibilidad, ¿el límite de capacidad de licencia por nodo o para todo el par de alta disponibilidad?
+El límite de capacidad corresponde a todo el par de alta disponibilidad. No es por nodo. Por ejemplo, si utiliza la licencia Premium, puede tener hasta 368 TIB de capacidad entre ambos nodos.
+
+
+
+== Límites de discos y almacenamiento por niveles por tamaño de equipo virtual
+
+Los límites de discos que figuran a continuación son específicos de los discos que contienen datos de usuario. Los límites no incluyen el disco de arranque ni el disco raíz. En las siguientes tablas se muestra la capacidad máxima del sistema por tamaño de máquina virtual con discos o sola, y con discos y organización en niveles de datos inactivos para el almacenamiento de objetos.
+
+Los límites de discos se muestran según el tamaño de las máquinas virtuales para las licencias Premium y BYOL. Solo porque los límites de los discos no se pueden alcanzar con las licencias Explore o Estándar debido a los límites de capacidad del sistema.
+
+* Los sistemas de un solo nodo pueden utilizar discos gestionados estándar por HDD, discos gestionados por SSD estándar y discos gestionados Premium SSD, con hasta 32 TIB por disco. La cantidad de discos admitidos varía según el tamaño de la máquina virtual.
+* Los sistemas DE ALTA DISPONIBILIDAD usan los blobs de página Premium como discos, con un máximo de 8 TIB por blob de página. La cantidad de discos admitidos varía según el tamaño de la máquina virtual.
+
+
+
+
+=== Un solo nodo con una licencia Premium
+
+[cols="14,20,31,33"]
+|===
+| Tamaño de la máquina virtual | Número máx. De discos por nodo | Máx. De capacidad del sistema solo con discos | Max capacidad del sistema con discos y organización en niveles de los datos 
+
+
+| DS5_v2 | 63 | 368 TIB | 368 TIB 
+
+
+| DS14_v2 | 63 | 368 TIB | 368 TIB 
+
+
+| DS15_v2 | 63 | 368 TIB | 368 TIB 
+|===
+
+
+=== Un solo nodo con una o varias licencias BYOL
+
+
+NOTE: En algunos tipos de equipos virtuales, necesitará varias licencias de BYOL para alcanzar la capacidad máxima del sistema que se indica a continuación. Por ejemplo, necesitará 6 licencias BYOL para llegar a 2 TIB con DS5_v2.
+
+[cols="10,18,18,18,18,18"]
+|===
+| Tamaño de la máquina virtual | Número máx. De discos por nodo 2+| Capacidad máxima del sistema con una licencia 2+| Capacidad máxima del sistema con varias licencias 
+
+
+2+|  | *Solo discos* | *Discos + organización en niveles de datos* | *Solo discos* | *Discos + organización en niveles de datos* 
+
+
+| DS3_v2 | 15 | 368 TIB | 368 TIB | 480 TIB | 368 TIB x cada licencia 
+
+
+| DS4_v2 | 31 | 368 TIB | 368 TIB | 896 TIB | 368 TIB x cada licencia 
+
+
+| DS5_v2 | 63 | 368 TIB | 368 TIB | 896 TIB | 368 TIB x cada licencia 
+
+
+| DS13_v2 | 31 | 368 TIB | 368 TIB | 896 TIB | 368 TIB x cada licencia 
+
+
+| DS14_v2 | 63 | 368 TIB | 368 TIB | 896 TIB | 368 TIB x cada licencia 
+
+
+| DS15_v2 | 63 | 368 TIB | 368 TIB | 896 TIB | 368 TIB x cada licencia 
+|===
+
+
+=== Pares de ALTA DISPONIBILIDAD con una licencia Premium
+
+[cols="14,20,31,33"]
+|===
+| Tamaño de la máquina virtual | Discos MAX Data para una pareja de alta disponibilidad | Máx. De capacidad del sistema solo con discos | Max capacidad del sistema con discos y organización en niveles de los datos 
+
+
+| DS5_v2 | 63 | 368 TIB | 368 TIB 
+
+
+| DS14_v2 | 63 | 368 TIB | 368 TIB 
+
+
+| DS15_v2 | 63 | 368 TIB | 368 TIB 
+|===
+
+
+=== Pares de ALTA DISPONIBILIDAD con una o varias licencias BYOL
+
+[cols="10,18,18,18,18,18"]
+|===
+| Tamaño de la máquina virtual | Discos MAX Data para una pareja de alta disponibilidad 2+| Capacidad máxima del sistema con una licencia 2+| Capacidad máxima del sistema con varias licencias 
+
+
+2+|  | *Solo discos* | *Discos + organización en niveles de datos* | *Solo discos* | *Discos + organización en niveles de datos* 
+
+
+| DS4_v2 | 31 | 368 TIB | 368 TIB | 248 TIB | 368 TIB x cada licencia 
+
+
+| DS5_v2 | 63 | 368 TIB | 368 TIB | 504 TIB | 368 TIB x cada licencia 
+
+
+| DS13_v2 | 31 | 368 TIB | 368 TIB | 248 TIB | 368 TIB x cada licencia 
+
+
+| DS14_v2 | 63 | 368 TIB | 368 TIB | 504 TIB | 368 TIB x cada licencia 
+
+
+| DS15_v2 | 63 | 368 TIB | 368 TIB | 504 TIB | 368 TIB x cada licencia 
+|===
+
+
+== Límites del agregado
+
+Cloud Volumes ONTAP usa almacenamiento de Azure como discos y los agrupa en _agregados_. Los agregados proporcionan almacenamiento para volúmenes.
+
+[cols="2*"]
+|===
+| Parámetro | Límite 
+
+
+| Número máximo de agregados | Igual que el límite de discos 
+
+
+| Tamaño máximo de agregado | 352 TIB de capacidad bruta para un solo nodo, hacia 96 TIB de capacidad bruta para pares de alta disponibilidad hacia este 1 
+
+
+| Discos por agregado | 1-12 hacia 3 
+
+
+| Número máximo de grupos RAID por agregado | 1 
+|===
+Notas:
+
+. El límite de capacidad del agregado se basa en los discos que componen el agregado. El límite no incluye el almacenamiento de objetos utilizado para la organización en niveles de datos.
+. El límite de 352 TIB es compatible a partir de 9.6 P3. Las versiones anteriores a 9.6 P3 admiten hasta 200 TIB de capacidad bruta en un agregado de un sistema de nodo único.
+. Todos los discos de un agregado deben tener el mismo tamaño.
+
+
+
+
+== Límites de almacenamiento lógico
+
+[cols="22,22,56"]
+|===
+| Almacenamiento lógico | Parámetro | Límite 
+
+
+| *Almacenamiento de máquinas virtuales (SVM)* | Número máximo para Cloud Volumes ONTAP (pareja de alta disponibilidad o nodo único) | Un SVM que sirve datos y una SVM de destino utilizada para la recuperación ante desastres. Puede activar la SVM de destino para el acceso a los datos si se produce una interrupción en la SVM de origen. Esta 1 la SVM que sirve datos se extiende por todo el sistema Cloud Volumes ONTAP (par de alta disponibilidad o nodo único). 
+
+
+.2+| *Archivos* | Tamaño máximo | 16 TIB 
+
+
+| Máximo por volumen | Depende del tamaño del volumen, hasta 2000 millones 
+
+
+| *Volúmenes FlexClone* | Profundidad de clonación jerárquica hacia esta 2 | 499 
+
+
+.3+| *Volúmenes FlexVol* | Máximo por nodo | 500 
+
+
+| Tamaño mínimo | 20 MB 
+
+
+| Tamaño máximo | 100 TIB 
+
+
+| *Qtrees* | Máximo por volumen FlexVol | 4,995 
+
+
+| *Copias Snapshot* | Máximo por volumen FlexVol | 1,023 
+|===
+Notas:
+
+. Cloud Manager no ofrece ninguna compatibilidad de configuración ni orquestación para la recuperación ante desastres de SVM. Tampoco admite tareas relacionadas con el almacenamiento en una SVM adicional. Debe usar System Manager o la CLI para la recuperación ante desastres de SVM.
++
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Guía exprés de preparación para la recuperación de desastres de SVM"^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Guía exprés de recuperación ante desastres de SVM"^]
+
+
+. La profundidad de clon jerárquica es la profundidad máxima de una jerarquía anidada de volúmenes FlexClone que se pueden crear a partir de un único volumen de FlexVol.
+
+
+
+
+== Límites de almacenamiento de iSCSI
+
+[cols="3*"]
+|===
+| Almacenamiento iSCSI | Parámetro | Límite 
+
+
+.4+| *LUN* | Máximo por nodo | 1,024 
+
+
+| Número máximo de mapas de LUN | 1,024 
+
+
+| Tamaño máximo | 16 TIB 
+
+
+| Máximo por volumen | 512 
+
+
+| *grupos* | Máximo por nodo | 256 
+
+
+.2+| *Iniciadores* | Máximo por nodo | 512 
+
+
+| Máximo por igroup | 128 
+
+
+| *Sesiones iSCSI* | Máximo por nodo | 1,024 
+
+
+.2+| *LIF* | Máximo por puerto | 32 
+
+
+| Máximo por conjunto de puertos | 32 
+
+
+| *Portsets* | Máximo por nodo | 256 
+|===

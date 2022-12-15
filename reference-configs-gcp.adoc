@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes 
+summary: 'Cloud Volumes ONTAP está disponible en Google Cloud Platform como un sistema de nodo único. Hay dos opciones de precios disponibles, de pago por uso y con su propia licencia (BYOL).' 
+---
+= Configuraciones compatibles en Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP está disponible en Google Cloud Platform como un sistema de nodo único. Hay dos opciones de precios disponibles: Pago por uso y con su propia licencia (BYOL).
+
+
+
+== Información general sobre el pago por uso
+
+* Ofrece Cloud Volumes ONTAP en tres opciones de licencia diferentes: Explorar, Standard y Premium.
+* Se encuentra disponible una prueba gratuita de 30 días para el primer sistema Cloud Volumes ONTAP que se implementa en Google Cloud.
++
+** No se cobran costes de software por hora, pero siguen aplicándose los costes de infraestructura de Google Cloud (computación, almacenamiento y redes).
+** Cuando finalice la prueba gratuita, se le cobrará cada hora de acuerdo con la licencia seleccionada, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager["siempre que se haya suscrito"^]. Si no se ha suscrito, el sistema se apaga.
+
+
+* Las conversiones de PAYGO a BYOL no son compatibles actualmente.
+* Se ofrece soporte técnico básico, pero debe registrar y activar el número de serie de NetApp asociado a su sistema.
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-registering.html["Registre sistemas de pago por uso en Cloud Manager"^]
+
+
+
+
+
+== Información general sobre BYOL
+
+* Licencia de un solo nodo con opciones de suscripción de término como 12 meses, 24 meses, etc.
+* Se incluye soporte durante el período de vigencia de la suscripción.
+* Puede comprar varias licencias para un sistema BYOL de Cloud Volumes ONTAP con el fin de asignar más de 368 TB de capacidad.
++
+Por ejemplo, puede adquirir dos licencias para asignar hasta 736 TB de capacidad a Cloud Volumes ONTAP. O usted podría comprar cuatro licencias para obtener hasta 1.4 PIB.
+
+
+
+
+
+== Configuraciones admitidas por licencia
+
+Cloud Volumes ONTAP está disponible en Google Cloud Platform como un sistema de nodo único.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Explorar | Estándar | Premium | BYOL 
+
+
+| Tipos de máquina compatibles hacia esta 1 | personalizado: 4-16384 | n1-estándar-8 | n1-estándar-32  a| 
+* personalizado: 4-16384
+* n1-estándar-8
+* n1-estándar-32
+
+
+
+
+| Tipos de disco compatibles hacia esta 2 4+| Discos persistentes zonal (SSD y estándar) 
+
+
+| Organización en niveles de datos inactivos para el almacenamiento de objetos | No admitido 3+| Compatible 
+
+
+| Capacidad máxima del sistema (discos + almacenamiento de objetos) | 2 TB | 10 TB | 368 TB HACIA 3 | 368 TB por licencia hacia 3 
+|===
+Notas:
+
+. El tipo de equipo personalizado tiene 4 vCPU y 16 GB de memoria. Para obtener información detallada sobre los tipos de máquina estándar, consulte https://cloud.google.com/compute/docs/machine-types#standard_machine_types["Documentación de Google Cloud: Tipos de máquina"^].
+. El rendimiento de escritura mejorado se habilita al usar SSD.
+. Los límites de discos impiden que llegue al límite de capacidad de 368 TB usando solo discos. Es posible alcanzar el límite de capacidad de 368 TB mediante https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["organización en niveles de los datos inactivos en el almacenamiento de objetos"^].
++
+link:reference-limits-gcp.html["Más información acerca de los límites de discos en Google Cloud"].
+
+. Para obtener información sobre la compatibilidad con la región de Google Cloud Platform, consulte https://cloud.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
+
+
+
+
+== Tamaños de disco admitidos
+
+En Google Cloud, un agregado puede contener hasta 6 discos con el mismo tipo y tamaño. Se admiten los siguientes tamaños de disco:
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+

@@ -1,0 +1,404 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-aws.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs 
+summary: Cloud Volumes ONTAP tiene límites de configuración de almacenamiento en AWS para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos. 
+---
+= Límites de almacenamiento en AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP tiene límites de configuración de almacenamiento para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos.
+
+
+
+== Capacidad máxima del sistema por licencia
+
+La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP viene determinada por su licencia. La capacidad máxima del sistema incluye almacenamiento basado en disco y almacenamiento de objetos utilizado para la organización en niveles de datos. NetApp no admite superar este límite.
+
+Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["organización en niveles de los datos inactivos en el almacenamiento de objetos"^]. Consulte los límites de capacidad y de disco siguientes para obtener más información.
+
+[cols="25,75"]
+|===
+| Licencia | Capacidad máxima del sistema (discos + almacenamiento de objetos) 
+
+
+| Explorar | 2 TIB (la organización en niveles de los datos no es compatible con Explore) 
+
+
+| Estándar | 10 TIB 
+
+
+| Premium | 368 TIB 
+
+
+| BYOL | 368 TIB por licencia 
+|===
+.Para alta disponibilidad, ¿el límite de capacidad de licencia por nodo o para todo el par de alta disponibilidad?
+El límite de capacidad corresponde a todo el par de alta disponibilidad. No es por nodo. Por ejemplo, si utiliza la licencia Premium, puede tener hasta 368 TIB de capacidad entre ambos nodos.
+
+.En el caso de un sistema de alta disponibilidad en AWS, ¿los datos reflejados tienen en cuenta el límite de capacidad?
+No, no lo hace. Los datos de una pareja de alta disponibilidad de AWS se replican de forma síncrona entre los nodos, de modo que los datos estén disponibles en caso de fallo. Por ejemplo, si adquiere un disco de 8 TIB en el nodo A, Cloud Manager también asigna un disco de 8 TIB en el nodo B que se utiliza para datos reflejados. Mientras que se aprovisionaron 16 TIB de capacidad, solo 8 TIB cuenta contra el límite de licencia.
+
+
+
+== Límites de discos y organización en niveles por instancia de EC2
+
+Cloud Volumes ONTAP utiliza volúmenes de EBS como discos, con un tamaño de disco máximo de 16 TIB. Las secciones siguientes muestran los límites de discos y niveles por tipo de instancia de EC2 porque muchos tipos de instancias de EC2 tienen límites de discos diferentes. Los límites de disco también son diferentes entre sistemas de un solo nodo y pares de alta disponibilidad.
+
+Los límites de discos que figuran a continuación son específicos de los discos que contienen datos de usuario. Los límites no incluyen el disco de arranque ni el disco raíz.
+
+Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo porque los límites de los discos no se pueden alcanzar con las licencias Explore o Estándar.
+
+
+
+=== Un solo nodo con una licencia Premium
+
+[cols="16,20,30,32"]
+|===
+| Tipo de instancia | Número máx. De discos por nodo | Máx. De capacidad del sistema solo con discos | Max capacidad del sistema con discos y organización en niveles de los datos 
+
+
+| c4.4xgrande | 34 | 368 TIB | 368 TIB 
+
+
+| c4.8x grande | 34 | 368 TIB | 368 TIB 
+
+
+| c5.9xlarge | 22 | 352 TIB | 368 TIB 
+
+
+| c5.18xlarge | 22 | 352 TIB | 368 TIB 
+
+
+| c5d.4 x grande | 22 | 352 TIB | 368 TIB 
+
+
+| c5d.9xlarge | 22 | 352 TIB | 368 TIB 
+
+
+| c5d.18xlarge | 22 | 352 TIB | 368 TIB 
+
+
+| m4.4xgrande | 34 | 368 TIB | 368 TIB 
+
+
+| m5.4xgrande | 22 | 352 TIB | 368 TIB 
+
+
+| m5d.8xgrande | 22 | 352 TIB | 368 TIB 
+
+
+| r4.2xgrande | 34 | 368 TIB | 368 TIB 
+
+
+| r5,2xgrande | 22 | 352 TIB | 368 TIB 
+
+
+| r5d.2xgrande | 22 | 352 TIB | 368 TIB 
+|===
+
+
+=== Un solo nodo con una o varias licencias BYOL
+
+[cols="10,18,18,18,18,18"]
+|===
+| Tipo de instancia | Número máx. De discos por nodo 2+| Capacidad máxima del sistema con una licencia 2+| Capacidad máxima del sistema con varias licencias 
+
+
+2+|  | *Solo discos* | *Discos + organización en niveles de datos* | *Solo discos* | *Discos + organización en niveles de datos* 
+
+
+| c4.4xgrande | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| c4.8x grande | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| c5.9xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| c5.18xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| c5d.4 x grande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| c5d.9xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| c5d.18xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| m4.xlarge | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| m4.2xgrande | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| m4.4xgrande | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| m5.xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| m5,2xgrande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| m5.4xgrande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| m5d.8xgrande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| r4.xlarge | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| r4.2xgrande | 34 | 368 TIB | 368 TIB | 544 TIB | 368 TIB x cada licencia 
+
+
+| r5.xlarge | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| r5,2xgrande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+
+
+| r5d.2xgrande | 22 | 352 TIB | 368 TIB | 352 TIB | 368 TIB x cada licencia 
+|===
+
+
+=== Pares de ALTA DISPONIBILIDAD con una licencia Premium
+
+[cols="16,20,30,32"]
+|===
+| Tipo de instancia | Número máx. De discos por nodo | Máx. De capacidad del sistema solo con discos | Max capacidad del sistema con discos y organización en niveles de los datos 
+
+
+| c4.4xgrande | 31 | 368 TIB | 368 TIB 
+
+
+| c4.8x grande | 31 | 368 TIB | 368 TIB 
+
+
+| c5.9xlarge | 19 | 304 TIB | 368 TIB 
+
+
+| c5.18xlarge | 19 | 304 TIB | 368 TIB 
+
+
+| c5d.4 x grande | 19 | 304 TIB | 368 TIB 
+
+
+| c5d.9xlarge | 19 | 304 TIB | 368 TIB 
+
+
+| c5d.18xlarge | 19 | 304 TIB | 368 TIB 
+
+
+| m4.4xgrande | 31 | 368 TIB | 368 TIB 
+
+
+| m5.4xgrande | 19 | 304 TIB | 368 TIB 
+
+
+| m5d.8xgrande | 19 | 304 TIB | 368 TIB 
+
+
+| r4.2xgrande | 31 | 368 TIB | 368 TIB 
+
+
+| r5,2xgrande | 19 | 304 TIB | 368 TIB 
+
+
+| r5d.2xgrande | 19 | 304 TIB | 368 TIB 
+|===
+
+
+=== Pares de ALTA DISPONIBILIDAD con una o varias licencias BYOL
+
+[cols="10,18,18,18,18,18"]
+|===
+| Tipo de instancia | Número máx. De discos por nodo 2+| Capacidad máxima del sistema con una licencia 2+| Capacidad máxima del sistema con varias licencias 
+
+
+2+|  | *Solo discos* | *Discos + organización en niveles de datos* | *Solo discos* | *Discos + organización en niveles de datos* 
+
+
+| c4.4xgrande | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| c4.8x grande | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| c5.9xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| c5.18xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| c5d.4 x grande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| c5d.9xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| c5d.18xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| m4.xlarge | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| m4.2xgrande | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| m4.4xgrande | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| m5.xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| m5,2xgrande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| m5.4xgrande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| m5d.8xgrande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| r4.xlarge | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| r4.2xgrande | 31 | 368 TIB | 368 TIB | 496 TIB | 368 TIB x cada licencia 
+
+
+| r5.xlarge | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| r5,2xgrande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+
+
+| r5d.2xgrande | 19 | 304 TIB | 368 TIB | 304 TIB | 368 TIB x cada licencia 
+|===
+
+
+== Límites del agregado
+
+Cloud Volumes ONTAP usa volúmenes de AWS como discos y los agrupa en _agregados_. Los agregados proporcionan almacenamiento para volúmenes.
+
+[cols="2*"]
+|===
+| Parámetro | Límite 
+
+
+| Número máximo de agregados | Un solo nodo: El mismo límite de disco que los pares de alta disponibilidad: 18 en un nodo anterior 1 
+
+
+| Tamaño máximo de agregado | 96 TIB de capacidad bruta, esta 2 
+
+
+| Discos por agregado | 1-6 hacia 3 
+
+
+| Número máximo de grupos RAID por agregado | 1 
+|===
+Notas:
+
+. No es posible crear 18 agregados en ambos nodos en una pareja de alta disponibilidad porque hacerlo superaría el límite del disco de datos.
+. El límite de capacidad del agregado se basa en los discos que componen el agregado. El límite no incluye el almacenamiento de objetos utilizado para la organización en niveles de datos.
+. Todos los discos de un agregado deben tener el mismo tamaño.
+
+
+
+
+== Límites de almacenamiento lógico
+
+[cols="22,22,56"]
+|===
+| Almacenamiento lógico | Parámetro | Límite 
+
+
+| *Almacenamiento de máquinas virtuales (SVM)* | Número máximo para Cloud Volumes ONTAP (pareja de alta disponibilidad o nodo único) | Un SVM que sirve datos y una SVM de destino utilizada para la recuperación ante desastres. Puede activar la SVM de destino para el acceso a los datos si se produce una interrupción en la SVM de origen. Esta 1 la SVM que sirve datos se extiende por todo el sistema Cloud Volumes ONTAP (par de alta disponibilidad o nodo único). 
+
+
+.2+| *Archivos* | Tamaño máximo | 16 TIB 
+
+
+| Máximo por volumen | Depende del tamaño del volumen, hasta 2000 millones 
+
+
+| *Volúmenes FlexClone* | Profundidad de clonación jerárquica hacia esta 2 | 499 
+
+
+.3+| *Volúmenes FlexVol* | Máximo por nodo | 500 
+
+
+| Tamaño mínimo | 20 MB 
+
+
+| Tamaño máximo | 100 TIB 
+
+
+| *Qtrees* | Máximo por volumen FlexVol | 4,995 
+
+
+| *Copias Snapshot* | Máximo por volumen FlexVol | 1,023 
+|===
+Notas:
+
+. Cloud Manager no ofrece ninguna compatibilidad de configuración ni orquestación para la recuperación ante desastres de SVM. Tampoco admite tareas relacionadas con el almacenamiento en una SVM adicional. Debe usar System Manager o la CLI para la recuperación ante desastres de SVM.
++
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Guía exprés de preparación para la recuperación de desastres de SVM"^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Guía exprés de recuperación ante desastres de SVM"^]
+
+
+. La profundidad de clon jerárquica es la profundidad máxima de una jerarquía anidada de volúmenes FlexClone que se pueden crear a partir de un único volumen de FlexVol.
+
+
+
+
+== Límites de almacenamiento de iSCSI
+
+[cols="3*"]
+|===
+| Almacenamiento iSCSI | Parámetro | Límite 
+
+
+.4+| *LUN* | Máximo por nodo | 1,024 
+
+
+| Número máximo de mapas de LUN | 1,024 
+
+
+| Tamaño máximo | 16 TIB 
+
+
+| Máximo por volumen | 512 
+
+
+| *grupos* | Máximo por nodo | 256 
+
+
+.2+| *Iniciadores* | Máximo por nodo | 512 
+
+
+| Máximo por igroup | 128 
+
+
+| *Sesiones iSCSI* | Máximo por nodo | 1,024 
+
+
+.2+| *LIF* | Máximo por puerto | 32 
+
+
+| Máximo por conjunto de puertos | 32 
+
+
+| *Portsets* | Máximo por nodo | 256 
+|===
