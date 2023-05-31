@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.6 incluye varias funciones y mejoras nuevas.
 [role="lead"]
 Cloud Volumes ONTAP 9.6 incluye varias funciones y mejoras nuevas.
 
-También se incluyen funciones y mejoras adicionales en las versiones más recientes de Cloud Manager. Consulte https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Notas de la versión de Cloud Manager"^] para obtener más detalles.
+También se incluyen funciones y mejoras adicionales en las versiones más recientes de Cloud Manager. Consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notas de la versión de Cloud Manager"^] para obtener más detalles.
 
 
 
@@ -53,7 +53,7 @@ Algunos nuevos tipos de instancias de EC2 ahora son compatibles con Cloud Volume
 * m5d.8xgrande hacia 1,2
 
 
-Estos tipos de instancias incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Leer más"^].
+Estos tipos de instancias incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Leer más"^].
 
 Este tipo de instancia de esta aplicación es compatible con 9.6 P3 y posterior.
 
@@ -120,7 +120,7 @@ https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-m
 
 Cloud Volumes ONTAP está disponible de forma general en Google Cloud Platform (Google Cloud) al utilizar su propia licencia (BYOL). También está disponible una promoción de pago por uso. La promoción ofrece licencias gratuitas para un número ilimitado de sistemas y caducará a finales de septiembre de 2019.
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["Descubra cómo comenzar a usar Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html["Descubra cómo comenzar a usar Google Cloud"^]
 * link:reference-configs-gcp.html["Ver las configuraciones admitidas"]
 
 
@@ -167,7 +167,7 @@ Para unirse a la previsualización privada, envíe una solicitud a ng-Cloud-Volu
 
 La organización en niveles de datos ahora es compatible con los pares de alta disponibilidad de Cloud Volumes ONTAP en Microsoft Azure. La organización en niveles de los datos permite el almacenamiento automatizado por niveles de los datos inactivos a un almacenamiento BLOB de bajo coste.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Descubra cómo configurar la organización en niveles de los datos en Cloud Manager"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Descubra cómo configurar la organización en niveles de los datos en Cloud Manager"^].
 
 
 

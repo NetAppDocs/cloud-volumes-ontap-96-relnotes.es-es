@@ -3,7 +3,6 @@
   <block id="641cb6ea406fcea2f5cb83d5bff6a2cf" category="summary">Cloud Volumes ONTAP 9.6 incluye varias funciones y mejoras nuevas.</block>
   <block id="8c516265e5114ab1d7cdb12e4ef8f7be" category="doc">Novedades de Cloud Volumes ONTAP 9.6</block>
   <block id="f9d74313da16b2bb412c1d7c5efd0534" category="inline-link">Notas de la versión de Cloud Manager</block>
-  <block id="62703524dbb4d20326585184b2149d4d" category="paragraph">También se incluyen funciones y mejoras adicionales en las versiones más recientes de Cloud Manager. Consulte<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> para obtener más detalles.</block>
   <block id="2ed207d0ccec3d8be6a97fa4e5cbe8cf" category="section-title">9.6 P8 (2 de junio de 2020)</block>
   <block id="a5757ef07045a814bda504c5b48177c6" category="inline-link">Consulte la lista de errores corregidos en el parche P8</block>
   <block id="743c27b399481dcab7ab9e4537f7b730" category="paragraph">La versión de parche 9.6 P8 para Cloud Volumes ONTAP ya está disponible a través de Cloud Manager 3.8 y versiones posteriores. Cloud Manager le solicitará que actualice sus sistemas existentes a esta versión de revisión.<block ref="27ed2f4c2c7cbda227c565c50709952b" category="inline-link-rx"></block> (Se requiere inicio de sesión en el sitio de soporte de NetApp).</block>
@@ -21,7 +20,6 @@
   <block id="49528ea65a365d8dc0f923d95151fe53" category="list-text">c5d.18xlarge hacia 1,2</block>
   <block id="7323a9688dc50d251d095d24857ab5aa" category="list-text">m5d.8xgrande hacia 1,2</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">Leer más</block>
-  <block id="54e92fde42179ca33e3ab25b036eee3b" category="paragraph">Estos tipos de instancias incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_.<block ref="11a0a91823c32739dc802a8a06ed9368" category="inline-link-rx"></block>.</block>
   <block id="58f5bca7ebf9364add8b8aa49376d27a" category="paragraph">Este tipo de instancia de esta aplicación es compatible con 9.6 P3 y posterior.</block>
   <block id="e40db7e519ec8133d3d5ec2b6018eb7d" category="inline-link">Obtenga más información acerca de estos tipos de instancias EC2</block>
   <block id="14c41dc08d5ec9262ecf13e1e578aa8d" category="paragraph"><block ref="9c041fd599501fd190b6b179970667cf" category="inline-link-rx"></block>.</block>
@@ -57,7 +55,6 @@
   <block id="c22d58d132fde08e6cb3ce8682ef0c27" category="section-title">Disponibilidad general de Cloud Volumes ONTAP en Google Cloud (3 de septiembre de 2019)</block>
   <block id="b5c4261984e1b609960996cc7f8db6f1" category="paragraph">Cloud Volumes ONTAP está disponible de forma general en Google Cloud Platform (Google Cloud) al utilizar su propia licencia (BYOL). También está disponible una promoción de pago por uso. La promoción ofrece licencias gratuitas para un número ilimitado de sistemas y caducará a finales de septiembre de 2019.</block>
   <block id="aceb7b5c9dcaec5bdfbb67154ac957b7" category="inline-link">Descubra cómo comenzar a usar Google Cloud</block>
-  <block id="c7713a8dd332a241f8ba976a2dfd415a" category="list-text"><block ref="c7713a8dd332a241f8ba976a2dfd415a" category="inline-link-rx"></block></block>
   <block id="4f43bc0d7d3c4f71a88bde15ba890d61" category="inline-link-macro">Ver las configuraciones admitidas</block>
   <block id="9d259e09a2069492d05d38d036dc343f" category="list-text"><block ref="9d259e09a2069492d05d38d036dc343f" category="inline-link-macro-rx"></block></block>
   <block id="093b906e941c2ed3dbe4cd53fa2b968a" category="section-title">9.6 P2 (29 de agosto de 2019)</block>
@@ -80,7 +77,6 @@
   <block id="15b22b58ab99e57c3a666fd8ccafd60c" category="section-title">Organización en niveles de los datos con pares de alta disponibilidad en Azure</block>
   <block id="781a2603f60f2e06f4bd34fe37dcceb2" category="paragraph">La organización en niveles de datos ahora es compatible con los pares de alta disponibilidad de Cloud Volumes ONTAP en Microsoft Azure. La organización en niveles de los datos permite el almacenamiento automatizado por niveles de los datos inactivos a un almacenamiento BLOB de bajo coste.</block>
   <block id="2f455eadbff0e0cda8ff0cc2d5f1656a" category="inline-link">Descubra cómo configurar la organización en niveles de los datos en Cloud Manager</block>
-  <block id="cbd1f918660d8498d9e36cea1a052ceb" category="paragraph"><block ref="30318058820d18ebea3b434a4bb49cb6" category="inline-link-rx"></block>.</block>
   <block id="1b6c4eacbc8a0440eaac705ef435daca" category="section-title">Compatibilidad con volúmenes de FlexCache</block>
   <block id="2ddb8d07e9f5af9d9a76333b9ef2a7cb" category="paragraph">Un volumen FlexCache es un volumen de almacenamiento que almacena en caché datos de lectura NFS de un volumen de origen (o origen). Las lecturas posteriores a los datos almacenados en caché hacen que el acceso a los datos sea más rápido.</block>
   <block id="90c624683582774042156c98858d14dc" category="paragraph">Puede usar volúmenes de FlexCache para acelerar el acceso a los datos o para descargar el tráfico de volúmenes con un acceso frecuente. Los volúmenes FlexCache ayudan a mejorar el rendimiento, en especial cuando los clientes necesitan acceder a los mismos datos en repetidas ocasiones, ya que los datos pueden ofrecerse directamente sin tener que acceder al volumen de origen. Los volúmenes FlexCache funcionan bien con cargas de trabajo del sistema que requieren una gran cantidad de lecturas.</block>
@@ -115,7 +111,6 @@
   <block id="d1b41bae935c2bf4a024f87fd8d51066" category="list-text">Las conversiones de PAYGO a BYOL no son compatibles actualmente.</block>
   <block id="af4bff0fe0220cab6d9e429a98e85d86" category="list-text">Se ofrece soporte técnico básico, pero debe registrar y activar el número de serie de NetApp asociado a su sistema.</block>
   <block id="ba6c2f02fab845cdcf205c763a833a95" category="inline-link">Registre sistemas de pago por uso en Cloud Manager</block>
-  <block id="43befa669bb3435dd7074ad9786f00ff" category="paragraph"><block ref="43befa669bb3435dd7074ad9786f00ff" category="inline-link-rx"></block></block>
   <block id="18f78dd4b1fa4f25ebb2af7059d2d1e9" category="section-title">Información general sobre BYOL</block>
   <block id="7f76f820d237f30fbf118cdc0315682a" category="list-text">Licencia de un solo nodo con opciones de suscripción de término como 12 meses, 24 meses, etc.</block>
   <block id="abb25ffe4ec9feb0c1e66c45b57baf75" category="list-text">Se incluye soporte durante el período de vigencia de la suscripción.</block>
@@ -146,7 +141,6 @@
   <block id="59ef5de4b82ed93557c876f1dfde976a" category="list-text">El tipo de equipo personalizado tiene 4 vCPU y 16 GB de memoria. Para obtener información detallada sobre los tipos de máquina estándar, consulte<block ref="72c995a0d75f0c9234d21b302484afa8" category="inline-link-rx"></block>.</block>
   <block id="5063d3259058d90bbca06465957626d7" category="list-text">El rendimiento de escritura mejorado se habilita al usar SSD.</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">organización en niveles de los datos inactivos en el almacenamiento de objetos</block>
-  <block id="af43b30ad14614d54641050981fca311" category="list-text">Los límites de discos impiden que llegue al límite de capacidad de 368 TB usando solo discos. Es posible alcanzar el límite de capacidad de 368 TB mediante<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>.</block>
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">Más información acerca de los límites de discos en Google Cloud</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>.</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Regiones globales de Cloud Volumes</block>
@@ -205,7 +199,6 @@
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">Cloud Volumes ONTAP tiene límites de configuración de almacenamiento para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos.</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">Capacidad máxima del sistema por licencia</block>
   <block id="7de15f2416b1b598e771303381d1179e" category="paragraph">La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP viene determinada por su licencia. La capacidad máxima del sistema incluye almacenamiento basado en disco y almacenamiento de objetos utilizado para la organización en niveles de datos. NetApp no admite superar este límite.</block>
-  <block id="073dcb6629ea09574fb688791b566258" category="paragraph">Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>. Consulte los límites de capacidad y de disco siguientes para obtener más información.</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">Licencia</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">Capacidad máxima del sistema (discos + almacenamiento de objetos)</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2 TIB (la organización en niveles de los datos no es compatible con Explore)</block>
@@ -338,7 +331,6 @@
   <block id="0c4c4e63836f218793463e3bcdaddf27" category="list-text">El rendimiento de escritura mejorado se habilita al usar unidades de estado sólido con Cloud Volumes ONTAP Standard, Premium y BYOL.</block>
   <block id="3de497f7f0c3d4c077d3911a90241bdb" category="list-text">No se admiten los SSD gp3.</block>
   <block id="9cb3b0db1f5a7a0032a165789bcde1dd" category="inline-link-macro">límites de almacenamiento</block>
-  <block id="a80ff77ce9dbd5f7918811dad8935e62" category="list-text">Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>. Para obtener más información acerca de los límites de disco, consulte <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>.</block>
   <block id="4375839c669e051e5f2a8de11ba0c5d0" category="list-text">Para obtener información sobre compatibilidad con regiones de AWS, consulte<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="f1ef8a69abb63b240d611c09ea5ddde6" category="paragraph">En AWS, un agregado puede contener hasta 6 discos con el mismo tamaño y tipo.</block>
   <block id="eaa2d3a786327e0ea77b42c648bf6007" category="cell">SSD de uso general (gp2)</block>
@@ -347,7 +339,6 @@
   <block id="b23de6890dfc4a44067a64513c3d5411" category="list-text">6 TIB</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP tiene límites de configuración de almacenamiento en Google Cloud para proporcionar operaciones fiables. Para obtener el mejor rendimiento, no configure el sistema con los valores máximos.</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Límites de almacenamiento en Google Cloud</block>
-  <block id="bd1aae9c9a2ad10315cc633ab8b20aea" category="paragraph">En las licencias Premium y BYOL, los límites de los discos impiden que alcance el límite de capacidad de 368 TB únicamente con discos. Es posible alcanzar el límite de capacidad de 368 TB mediante<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>. Consulte los siguientes límites de discos para obtener más información.</block>
   <block id="5f807342ab46838a576d3111827add1c" category="cell">2 TB (los datos por niveles no son compatibles con Explore)</block>
   <block id="86eaddcad9cef8a014b014a3ad2afb9c" category="cell">368 TB</block>
   <block id="38797647ee0806ca5a6dba902f03f6e0" category="cell">368 TB por licencia</block>
@@ -383,12 +374,6 @@
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">Las siguientes limitaciones se aplican a Cloud Volumes ONTAP en todos los proveedores de cloud: AWS, Azure y Google Cloud.</block>
   <block id="4ab1be901507467113ec58325fc4e033" category="section-title">Máximo de operaciones de replicación simultáneas</block>
   <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">El número máximo de transferencias simultáneas de SnapMirror o SnapVault para Cloud Volumes ONTAP es 100 por nodo, independientemente del tipo de instancia o de tipo de máquina.</block>
-  <block id="d302a39827e370146d2861389e98e60c" category="section-title">Apoyo en las regiones de China</block>
-  <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">Cloud Volumes ONTAP cuenta con el siguiente apoyo en las regiones de China.</block>
-  <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">Cloud Volumes ONTAP 9.6 es compatible en las regiones de AWS China.</block>
-  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">Los sistemas de un solo nodo son compatibles.</block>
-  <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">Se admiten las licencias adquiridas directamente en NetApp.</block>
-  <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">No se admiten el resto de ubicaciones, versiones, configuraciones y licencias.</block>
   <block id="1d7a5501cfb31aff808abb63ef9085c2" category="section-title">Cloud Manager debe completar las actualizaciones de software</block>
   <block id="cbc4bd981852b46f0fbf6e6a6d4ed5af" category="section-title">La implementación de Cloud Volumes ONTAP no se debe modificar desde la consola de su proveedor de cloud</block>
   <block id="5f706f3e7b360cd0d02bd068f4ba9afa" category="paragraph">Los cambios realizados en una configuración de Cloud Volumes ONTAP desde la consola del proveedor de cloud dan como resultado una configuración no compatible. Cualquier cambio en los recursos de Cloud Volumes ONTAP que cree y gestione Cloud Manager puede afectar a la estabilidad del sistema y a la capacidad de Cloud Manager para gestionar el sistema.</block>
@@ -451,10 +436,8 @@
   <block id="1de430b06ad7ac64cf016ffed9f4194b" category="section-title">Los pares de alta disponibilidad de Cloud Volumes ONTAP no admiten la devolución inmediata del almacenamiento</block>
   <block id="d69dddad3d38a1500a52e7e599cb94df" category="paragraph">Cuando un nodo se reinicia, el partner debe sincronizar los datos para que puedan devolver el almacenamiento. El tiempo que tarda en resincronizar los datos depende de la cantidad de datos escritos por los clientes mientras el nodo estaba inactivo y de la velocidad de escritura de datos durante el momento de la restauración.</block>
   <block id="ac1c2f0887629ee768721c3b8cf91e3a" category="inline-link">Descubra cómo funciona el almacenamiento en una pareja de ha de Cloud Volumes ONTAP que se ejecuta en AWS</block>
-  <block id="1ede57873000993784f510b4546c1c3f" category="paragraph"><block ref="946966cdbb5ad64ec13d8ce9c3014b31" category="inline-link-rx"></block>.</block>
   <block id="feb49be8ef50e34ae8a47a5369859187" category="section-title">Limitaciones en el entorno de AWS C2S</block>
   <block id="286cc15dc9f73773a029b936b2788c19" category="inline-link">Póngase en marcha en el entorno AWS C2S</block>
-  <block id="e1fd46c84609b96f4458729b4ee8c5ea" category="paragraph">Vea las limitaciones en los documentos de Cloud Manager:<block ref="fd45e509325fef59e1c268c2f62eedf4" category="inline-link-rx"></block></block>
   <block id="3bee858ea6f0b72c5c39cb3bd1c441f0" category="section-title">Limitaciones en regiones de AWS GovCloud (EE. UU.</block>
   <block id="cb272a6dc5e534974a2ae26644e5635f" category="list-text">Cloud Manager debe ponerse en marcha en una región de AWS GovCloud (EE. UU.) si desea iniciar instancias de Cloud Volumes ONTAP en cualquier región de AWS GovCloud (EE. UU.)</block>
   <block id="77cc64ce7fdafcda7deefa3aa250801c" category="list-text">Cuando se implementa en una región de AWS GovCloud (EE. UU.), Cloud Manager no puede detectar clústeres de ONTAP en una configuración de almacenamiento privado de NetApp para Microsoft Azure ni una configuración de almacenamiento privado de NetApp para SoftLayer.</block>
@@ -504,7 +487,18 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Comunidad de NetApp</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Blog de Cloud Central</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Seminarios web sobre el cloud</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Documentación de All Cloud Manager</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">Cloud de ONTAP</block>
+  <block id="919f52135f3da38305bc973583dd5fb5" category="list-text">Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Para obtener más información acerca de los límites de disco, consulte <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>.</block>
+  <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
+  <block id="6ed74a41a62734e492094462d818e839" category="paragraph">Vea las limitaciones en los documentos de Cloud Manager:<block ref="39ce2d41c9ed9c2da4c4794ff62efcad" category="inline-link-rx"></block></block>
+  <block id="0d73bfd4e92d48867fdb0a3f45a09812" category="paragraph"><block ref="0d73bfd4e92d48867fdb0a3f45a09812" category="inline-link-rx"></block></block>
+  <block id="2cbcfcba309672185fc322395fbfc2b2" category="list-text">Los límites de discos impiden que llegue al límite de capacidad de 368 TB usando solo discos. Es posible alcanzar el límite de capacidad de 368 TB mediante<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.</block>
+  <block id="298080da5481695f40c048881bb1d88d" category="paragraph">En las licencias Premium y BYOL, los límites de los discos impiden que alcance el límite de capacidad de 368 TB únicamente con discos. Es posible alcanzar el límite de capacidad de 368 TB mediante<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Consulte los siguientes límites de discos para obtener más información.</block>
+  <block id="91154ee53f153787e229a41c309a7105" category="paragraph">Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Consulte los límites de capacidad y de disco siguientes para obtener más información.</block>
+  <block id="6d43452380cd21cb4417b9a1824c3ac4" category="paragraph">También se incluyen funciones y mejoras adicionales en las versiones más recientes de Cloud Manager. Consulte<block ref="ae983c0a7ee8a786f01e9cc8530d422b" category="inline-link-rx"></block> para obtener más detalles.</block>
+  <block id="f0b3ec3784c8134aa3d1b3f616747c1f" category="paragraph">Estos tipos de instancias incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_.<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>.</block>
+  <block id="f28445b786a8ee508a547eb98b06d004" category="list-text"><block ref="f28445b786a8ee508a547eb98b06d004" category="inline-link-rx"></block></block>
+  <block id="7ae536183899b3255ea022e34c5f3b1f" category="paragraph"><block ref="2fbfe631d352cae0cc3edf98b3ab020c" category="inline-link-rx"></block>.</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Toda la documentación de BlueXP</block>
 </blocks>
