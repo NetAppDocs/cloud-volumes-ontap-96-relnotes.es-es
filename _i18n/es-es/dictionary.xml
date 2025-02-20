@@ -416,7 +416,6 @@
   <block id="d634bf53c207457b9f979a3511629617" category="doc">Limitaciones conocidas de Google Cloud</block>
   <block id="02c6db07568f707d210dadcbcddd5ea8" category="paragraph">No existen limitaciones conocidas específicas de Cloud Volumes ONTAP en Google Cloud Platform. Consulte <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>.</block>
   <block id="a9f27c00250c46c26cb8db62812585a9" category="summary">En estas notas de la versión, se describen las nuevas funciones, las limitaciones y los problemas conocidos de Cloud Volumes ONTAP 9.6.</block>
-  <block id="001a55affa5f48701656447cc466491a" category="doc">Notas de la versión de Cloud Volumes ONTAP 9.6</block>
   <block id="c28d38eab2723d5b03a4a9a583f5c81e" category="summary">Estas limitaciones conocidas son específicas de Cloud Volumes ONTAP en Amazon Web Services.</block>
   <block id="65a320b4c12bea4be3d7391ed581adef" category="doc">Limitaciones conocidas en AWS</block>
   <block id="68cc22abcb24fb488399f1364a61ac86" category="paragraph">Las siguientes limitaciones conocidas son específicas de Cloud Volumes ONTAP en Amazon Web Services. No olvide revisar también <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>.</block>
@@ -463,7 +462,6 @@
   <block id="de3e9d13e7280117368a2ab174e3e224" category="cell">352 TIB de capacidad bruta para un solo nodo, hacia 96 TIB de capacidad bruta para pares de alta disponibilidad hacia este 1</block>
   <block id="fd09e7b7125ae29e623561a2b5d68449" category="cell">1-12 hacia 3</block>
   <block id="fc7df49871764c5cd01bcf7c8307c597" category="list-text">El límite de 352 TIB es compatible a partir de 9.6 P3. Las versiones anteriores a 9.6 P3 admiten hasta 200 TIB de capacidad bruta en un agregado de un sistema de nodo único.</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">Página principal de las notas de la versión</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novedades</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">Configuraciones admitidas</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
@@ -483,8 +481,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Comunidad de NetApp</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Blog de Cloud Central</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Seminarios web sobre el cloud</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">Cloud de ONTAP</block>
   <block id="919f52135f3da38305bc973583dd5fb5" category="list-text">Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Para obtener más información acerca de los límites de disco, consulte <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>.</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
   <block id="6ed74a41a62734e492094462d818e839" category="paragraph">Vea las limitaciones en los documentos de Cloud Manager:<block ref="39ce2d41c9ed9c2da4c4794ff62efcad" category="inline-link-rx"></block></block>
@@ -496,7 +492,6 @@
   <block id="f0b3ec3784c8134aa3d1b3f616747c1f" category="paragraph">Estos tipos de instancias incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_.<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>.</block>
   <block id="f28445b786a8ee508a547eb98b06d004" category="list-text"><block ref="f28445b786a8ee508a547eb98b06d004" category="inline-link-rx"></block></block>
   <block id="7ae536183899b3255ea022e34c5f3b1f" category="paragraph"><block ref="2fbfe631d352cae0cc3edf98b3ab020c" category="inline-link-rx"></block>.</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Toda la documentación de BlueXP</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -505,4 +500,7 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Limitaciones del uso de extensiones de Azure VM</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP no es compatible con las extensiones de máquinas virtuales de Azure ni con aplicaciones de máquinas virtuales en una implementación. El uso de Cloud Volumes ONTAP en Azure con extensiones de VM provoca retrasos en las operaciones y NetApp recomienda evitarlos.</block>
+  <block id="415a4c0e58754d1017d75ef167c0e10e" category="sidebar">Notas de la versión de Cloud Volumes ONTAP 9,6</block>
 </blocks>
