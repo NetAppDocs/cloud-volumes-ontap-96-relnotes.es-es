@@ -66,7 +66,7 @@ Puede elegir entre las siguientes configuraciones al poner en marcha Cloud Volum
 Notas:
 
 . El rendimiento de escritura mejorado se habilita cuando se utilizan unidades SSD, pero no cuando se utiliza el tipo de máquina virtual DS3_v2.
-. Para obtener información sobre la compatibilidad con Azure region, consulte https://cloud.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
+. Para obtener soporte de región de Azure, consulte https://bluexp.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
 
 
 
@@ -109,7 +109,7 @@ Puede elegir entre las siguientes configuraciones al poner en marcha Cloud Volum
 |===
 Notas:
 
-. Para obtener información sobre la compatibilidad con Azure region, consulte https://cloud.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
+. Para obtener soporte de región de Azure, consulte https://bluexp.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
 
 
 

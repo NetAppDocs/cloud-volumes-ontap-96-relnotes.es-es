@@ -94,7 +94,7 @@ Notas:
 . El rendimiento de escritura mejorado se habilita al usar unidades de estado sólido con Cloud Volumes ONTAP Standard, Premium y BYOL.
 . No se admiten los SSD gp3.
 . Para algunas configuraciones de alta disponibilidad, los límites de discos le impiden alcanzar el límite de capacidad de 368 TIB utilizando discos únicamente. En esos casos, puede alcanzar el límite de capacidad de 368 TIB mediante https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["organización en niveles de los datos inactivos en el almacenamiento de objetos"^]. Para obtener más información acerca de los límites de disco, consulte link:reference-limits-aws.html["límites de almacenamiento"].
-. Para obtener información sobre compatibilidad con regiones de AWS, consulte https://cloud.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
+. Para obtener soporte de región de AWS, consulte https://bluexp.netapp.com/cloud-volumes-global-regions["Regiones globales de Cloud Volumes"^].
 
 
 
