@@ -18,6 +18,7 @@ Cloud Volumes ONTAP tiene límites de configuración de almacenamiento para prop
 
 
 
+[[maximum-system-capacity-by-license]]
 == Capacidad máxima del sistema por licencia
 
 La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP viene determinada por su licencia. La capacidad máxima del sistema incluye almacenamiento basado en disco y almacenamiento de objetos utilizado para la organización en niveles de datos. NetApp no admite superar este límite.
@@ -43,6 +44,7 @@ El límite de capacidad corresponde a todo el par de alta disponibilidad. No es 
 
 
 
+[[disk-and-tiering-limits-by-vm-size]]
 == Límites de discos y almacenamiento por niveles por tamaño de equipo virtual
 
 Los límites de discos que figuran a continuación son específicos de los discos que contienen datos de usuario. Los límites no incluyen el disco de arranque ni el disco raíz. En las siguientes tablas se muestra la capacidad máxima del sistema por tamaño de máquina virtual con discos o sola, y con discos y organización en niveles de datos inactivos para el almacenamiento de objetos.
@@ -55,6 +57,7 @@ Los límites de discos se muestran según el tamaño de las máquinas virtuales 
 
 
 
+[[single-node-with-a-premium-license]]
 === Un solo nodo con una licencia Premium
 
 [cols="14,20,31,33"]
@@ -72,6 +75,7 @@ Los límites de discos se muestran según el tamaño de las máquinas virtuales 
 |===
 
 
+[[single-node-with-one-or-more-byol-licenses]]
 === Un solo nodo con una o varias licencias BYOL
 
 
@@ -104,6 +108,7 @@ NOTE: En algunos tipos de equipos virtuales, necesitará varias licencias de BYO
 |===
 
 
+[[ha-pairs-with-a-premium-license]]
 === Pares de ALTA DISPONIBILIDAD con una licencia Premium
 
 [cols="14,20,31,33"]
@@ -121,6 +126,7 @@ NOTE: En algunos tipos de equipos virtuales, necesitará varias licencias de BYO
 |===
 
 
+[[ha-pairs-with-one-or-more-byol-licenses]]
 === Pares de ALTA DISPONIBILIDAD con una o varias licencias BYOL
 
 [cols="10,18,18,18,18,18"]
@@ -147,6 +153,7 @@ NOTE: En algunos tipos de equipos virtuales, necesitará varias licencias de BYO
 |===
 
 
+[[aggregate-limits]]
 == Límites del agregado
 
 Cloud Volumes ONTAP usa almacenamiento de Azure como discos y los agrupa en _agregados_. Los agregados proporcionan almacenamiento para volúmenes.
@@ -176,6 +183,7 @@ Notas:
 
 
 
+[[logical-storage-limits]]
 == Límites de almacenamiento lógico
 
 [cols="22,22,56"]
@@ -222,6 +230,7 @@ Notas:
 
 
 
+[[iscsi-storage-limits]]
 == Límites de almacenamiento de iSCSI
 
 [cols="3*"]

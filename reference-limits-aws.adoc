@@ -18,6 +18,7 @@ Cloud Volumes ONTAP tiene límites de configuración de almacenamiento para prop
 
 
 
+[[maximum-system-capacity-by-license]]
 == Capacidad máxima del sistema por licencia
 
 La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP viene determinada por su licencia. La capacidad máxima del sistema incluye almacenamiento basado en disco y almacenamiento de objetos utilizado para la organización en niveles de datos. NetApp no admite superar este límite.
@@ -48,6 +49,7 @@ No, no lo hace. Los datos de una pareja de alta disponibilidad de AWS se replica
 
 
 
+[[disk-and-tiering-limits-by-ec2-instance]]
 == Límites de discos y organización en niveles por instancia de EC2
 
 Cloud Volumes ONTAP utiliza volúmenes de EBS como discos, con un tamaño de disco máximo de 16 TIB. Las secciones siguientes muestran los límites de discos y niveles por tipo de instancia de EC2 porque muchos tipos de instancias de EC2 tienen límites de discos diferentes. Los límites de disco también son diferentes entre sistemas de un solo nodo y pares de alta disponibilidad.
@@ -58,6 +60,7 @@ Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo
 
 
 
+[[single-node-with-a-premium-license]]
 === Un solo nodo con una licencia Premium
 
 [cols="16,20,30,32"]
@@ -105,6 +108,7 @@ Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo
 |===
 
 
+[[single-node-with-one-or-more-byol-licenses]]
 === Un solo nodo con una o varias licencias BYOL
 
 [cols="10,18,18,18,18,18"]
@@ -173,6 +177,7 @@ Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo
 |===
 
 
+[[ha-pairs-with-a-premium-license]]
 === Pares de ALTA DISPONIBILIDAD con una licencia Premium
 
 [cols="16,20,30,32"]
@@ -220,6 +225,7 @@ Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo
 |===
 
 
+[[ha-pairs-with-one-or-more-byol-licenses]]
 === Pares de ALTA DISPONIBILIDAD con una o varias licencias BYOL
 
 [cols="10,18,18,18,18,18"]
@@ -288,6 +294,7 @@ Los límites de discos se muestran por ejemplo con licencias Premium y BYOL solo
 |===
 
 
+[[aggregate-limits]]
 == Límites del agregado
 
 Cloud Volumes ONTAP usa volúmenes de AWS como discos y los agrupa en _agregados_. Los agregados proporcionan almacenamiento para volúmenes.
@@ -317,6 +324,7 @@ Notas:
 
 
 
+[[logical-storage-limits]]
 == Límites de almacenamiento lógico
 
 [cols="22,22,56"]
@@ -363,6 +371,7 @@ Notas:
 
 
 
+[[iscsi-storage-limits]]
 == Límites de almacenamiento de iSCSI
 
 [cols="3*"]

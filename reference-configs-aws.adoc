@@ -18,6 +18,7 @@ Cloud Volumes ONTAP está disponible en AWS en dos opciones de precios: De pago 
 
 
 
+[[supported-configurations-by-license]]
 == Configuraciones admitidas por licencia
 
 Cloud Volumes ONTAP está disponible en AWS como un único sistema de nodo y como un par de nodos de alta disponibilidad para tolerancia a fallos y operaciones no disruptivas.
@@ -99,6 +100,7 @@ Notas:
 
 
 
+[[supported-disk-sizes]]
 == Tamaños de disco admitidos
 
 En AWS, un agregado puede contener hasta 6 discos con el mismo tamaño y tipo.

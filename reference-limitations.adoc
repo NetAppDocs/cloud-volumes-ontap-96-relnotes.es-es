@@ -20,36 +20,42 @@ Las siguientes limitaciones se aplican a Cloud Volumes ONTAP en todos los provee
 
 
 
+[[maximum-concurrent-replication-operations]]
 == Máximo de operaciones de replicación simultáneas
 
 El número máximo de transferencias simultáneas de SnapMirror o SnapVault para Cloud Volumes ONTAP es 100 por nodo, independientemente del tipo de instancia o de tipo de máquina.
 
 
 
+[[software-updates-must-be-completed-by-cloud-manager]]
 == Cloud Manager debe completar las actualizaciones de software
 
 Las actualizaciones de Cloud Volumes ONTAP se deben completar desde Cloud Manager. No debe actualizar Cloud Volumes ONTAP con System Manager o CLI. Hacerlo puede afectar a la estabilidad del sistema.
 
 
 
+[[cloud-volumes-ontap-deployment-must-not-be-modified-from-your-cloud-providers-console]]
 == La implementación de Cloud Volumes ONTAP no se debe modificar desde la consola de su proveedor de cloud
 
 Los cambios realizados en una configuración de Cloud Volumes ONTAP desde la consola del proveedor de cloud dan como resultado una configuración no compatible. Cualquier cambio en los recursos de Cloud Volumes ONTAP que cree y gestione Cloud Manager puede afectar a la estabilidad del sistema y a la capacidad de Cloud Manager para gestionar el sistema.
 
 
 
+[[disks-and-aggregates-must-be-managed-from-cloud-manager]]
 == Los discos y los agregados deben gestionarse desde Cloud Manager
 
 Todos los discos y agregados deben crearse y eliminarse directamente desde Cloud Manager. No debe realizar estas acciones desde otra herramienta de gestión. De esta manera, se puede afectar a la estabilidad del sistema, se puede obstaculizar la capacidad de añadir discos en el futuro y generar potencialmente cuotas redundantes para proveedores de cloud.
 
 
 
+[[snapmanager-licensing-limitation]]
 == Limitación de la licencia de SnapManager
 
 Las licencias de SnapManager por servidor son compatibles con Cloud Volumes ONTAP. No se admiten licencias por sistema de almacenamiento (suite SnapManager).
 
 
 
+[[unsupported-ontap-features]]
 == Funciones ONTAP no compatibles
 
 Cloud Volumes ONTAP no admite las siguientes funciones:

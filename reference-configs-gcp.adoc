@@ -18,6 +18,7 @@ Cloud Volumes ONTAP está disponible en Google Cloud Platform como un sistema de
 
 
 
+[[pay-as-you-go-overview]]
 == Información general sobre el pago por uso
 
 * Ofrece Cloud Volumes ONTAP en tres opciones de licencia diferentes: Explorar, Standard y Premium.
@@ -36,6 +37,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["
 
 
 
+[[byol-overview]]
 == Información general sobre BYOL
 
 * Licencia de un solo nodo con opciones de suscripción de término como 12 meses, 24 meses, etc.
@@ -48,6 +50,7 @@ Por ejemplo, puede adquirir dos licencias para asignar hasta 736 TB de capacidad
 
 
 
+[[supported-configurations-by-license]]
 == Configuraciones admitidas por licencia
 
 Cloud Volumes ONTAP está disponible en Google Cloud Platform como un sistema de nodo único.
@@ -86,6 +89,7 @@ link:reference-limits-gcp.html["Más información acerca de los límites de disc
 
 
 
+[[supported-disk-sizes]]
 == Tamaños de disco admitidos
 
 En Google Cloud, un agregado puede contener hasta 6 discos con el mismo tipo y tamaño. Se admiten los siguientes tamaños de disco:
